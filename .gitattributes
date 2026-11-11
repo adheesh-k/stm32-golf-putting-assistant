@@ -1,0 +1,6 @@
+# ST-provided and CubeMX-generated code should not count toward the language bar
+Drivers/** linguist-vendored
+cmake/** linguist-vendored
+Core/Inc/** linguist-generated
+Core/Src/*.c linguist-generated
+startup_stm32f401xe.s linguist-vendored
