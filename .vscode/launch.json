@@ -1,0 +1,25 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "STM32 Debug",
+            "type": "cortex-debug",
+            "request": "launch",
+            "servertype": "openocd",
+            "serverpath": "/opt/homebrew/bin/openocd",
+            "gdbPath": "/opt/homebrew/bin/arm-none-eabi-gdb",
+            "configFiles": [
+                "interface/stlink.cfg",
+                "target/stm32f4x.cfg"
+            ],
+            "executable": "${workspaceFolder}/build/Debug/349_Final_Project.elf",
+            "runToEntryPoint": "main",
+            "postLaunchCommands": [
+                "break putting_main",
+                "break main_loop",
+                "continue"
+            ],
+            "showDevDebugOutput": "none"
+        }
+    ]
+}
